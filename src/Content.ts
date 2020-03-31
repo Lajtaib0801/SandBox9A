@@ -24,11 +24,36 @@ export default class Content {
         const params = url.parse(req.url as string, true).query;
 
         // Kezd a kódolást innen -->
+        // Az algoritmusokban a változók a megadott típusú értékek (adatok) tárolására használt
+        // memóriatartományok elnevezései.
+        // let x = 12; // változó definíció: let változó Azon = kezdőérték
+        // x = 20;
+        // res.write(`Az x változő érték: ${x}`);
+        // res.write(x.toString() + "\n");
+        // const szöveg = "alma";
+        // res.write(szöveg + "\n");
+        // let esik: boolean;
+        // esik = true;
+        // esik = false;
+        // res.write(`${!esik}\n`);
 
-        res.write("Hello Jedlik, hello 9.A");
-        res.write("<h2 style='color:blue'>TipeSript</h2>");
-        res.write("próba\n");
-        res.write("alma\n");
+        res.write("Téglalap területe és kerülete\n");
+        res.write("a= ");
+        let oldalA: number = parseInt(params.inputa as string);
+        if (isNaN(oldalA)) {
+            oldalA = 20;
+        }
+        res.write(`<input type='text' name='imputa' value=${oldalA} style='width:5em:' onChange='this.form.submit();'`);
+        let oldalB: number = parseInt(params.inputa as string);
+        if (isNaN(oldalB)) {
+            oldalB = 20;
+        }
+        res.write(`<input type='text' name='imputa' value=${oldalB} style='width:5em:' onChange='this.form.submit();'`);
+
+        const terület = oldalA * oldalB;
+        const kerület = oldalA + oldalB;
+        res.write(`Terület = ${terület}\n`);
+        res.write(`Kerület = ${kerület}\n`);
 
         // <---- Fejezd be a kódolást
 
