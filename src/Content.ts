@@ -44,6 +44,7 @@ export default class Content {
             oldalA = 20;
         }
         res.write(`<input type='text' name='imputa' value=${oldalA} style='width:5em:' onChange='this.form.submit();'>\n`);
+        res.write("b= ");
         let oldalB: number = parseInt(params.inputa as string);
         if (isNaN(oldalB)) {
             oldalB = 30;
