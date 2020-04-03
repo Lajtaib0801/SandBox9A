@@ -35,6 +35,12 @@
         "**/*.npmrc": true
     },
     "spellright.notificationClass": "information",
-    "spellright.language": ["en", "hu"],
-    "spellright.documentTypes": ["latex", "plaintext"]
+    "spellright.language": [
+        "en",
+        "hu"
+    ],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext"
+    ]
 }
