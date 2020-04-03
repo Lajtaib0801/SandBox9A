@@ -43,17 +43,19 @@ export default class Content {
         if (isNaN(oldalA)) {
             oldalA = 20;
         }
-        res.write(`<input type='text' name='imputa' value=${oldalA} style='width:5em:' onChange='this.form.submit();'`);
+        res.write(`<input type='text' name='imputa' value=${oldalA} style='width:5em:' onChange='this.form.submit();'>\n`);
         let oldalB: number = parseInt(params.inputa as string);
         if (isNaN(oldalB)) {
-            oldalB = 20;
+            oldalB = 30;
         }
-        res.write(`<input type='text' name='imputa' value=${oldalB} style='width:5em:' onChange='this.form.submit();'`);
+        res.write(`<input type='text' name='imputa' value=${oldalB} style='width:5em:' onChange='this.form.submit();'>\n`);
 
         const terület: number = oldalA * oldalB;
         const kerület: number = oldalA + oldalB;
         res.write(`Terület = ${terület}\n`);
         res.write(`Kerület = ${kerület}\n`);
+        res.write("alma");
+        res.write("\n\n");
 
         // <---- Fejezd be a kódolást
 
