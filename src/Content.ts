@@ -50,8 +50,8 @@ export default class Content {
         }
         res.write(`<input type='text' name='imputa' value=${oldalB} style='width:5em:' onChange='this.form.submit();'`);
 
-        const terület = oldalA * oldalB;
-        const kerület = oldalA + oldalB;
+        const terület: number = oldalA * oldalB;
+        const kerület: number = oldalA + oldalB;
         res.write(`Terület = ${terület}\n`);
         res.write(`Kerület = ${kerület}\n`);
 
