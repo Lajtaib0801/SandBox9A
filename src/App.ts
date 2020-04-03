@@ -3,7 +3,7 @@ import Content from "./Content";
 
 class Program {
     constructor() {
-        http.createServer(new Content().content).listen(process.env.PORT || 1111);
+        http.createServer(new Content().content).listen(process.env.PORT || 8080);
     }
 }
 
